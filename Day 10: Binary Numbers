@@ -1,0 +1,29 @@
+
+question link:https://www.hackerrank.com/challenges/30-binary-numbers
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+    b=bin(n)
+    found=1
+    max=1
+    for i in range(0,len(b)-1):
+        if b[i]=="1" and b[i+1]=="1":
+            found=found+1
+            if max<found:
+                max = found 
+        else:
+            found=1
+    print (max)
+
