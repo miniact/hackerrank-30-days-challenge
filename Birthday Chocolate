@@ -10,7 +10,7 @@ import sys
 def birthday(s, d, m):
     count=0
     for i in range(0,n):
-        if i==n-m-1:
+        if i==n-m+1:
                 break
         else:        
             sum=0
