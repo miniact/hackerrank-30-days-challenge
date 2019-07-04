@@ -1,0 +1,49 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the migratoryBirds function below.
+def migratoryBirds(arr):
+    
+    type=[0,0,0,0,0]
+    type[0]=arr.count(1)
+    type[1]=arr.count(2)
+    type[2]=arr.count(3)
+    type[3]=arr.count(4)
+    type[4]=arr.count(5)
+    max=type[0]
+    for i in range(0,5):
+       if max < type[i]:
+           max=type[i]
+           a=i
+    return a+1
+
+    
+    
+   #for i in range(0,arr_count):
+    #    if count < arr.count(arr[i]):
+     #       a=i
+      #      count=arr.count(arr[i])
+   # return arr[a]   
+          
+
+
+
+      
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    arr_count = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    result = migratoryBirds(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
